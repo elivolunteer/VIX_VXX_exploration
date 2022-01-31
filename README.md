@@ -20,6 +20,9 @@ To compensate for this risk VIX options can be bought to mitigate risk [**THIS N
 
 Since the VXX has rolling VIX futures, there is some exploitable difference in the spot prices of the VXX, VIX futures and VIX options. This data analysis will explore the relationships between the three.
 
+## VIX and VXX Exploration
+-> VIX_VXX.ipynb
+
 
 
 
