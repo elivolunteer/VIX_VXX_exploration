@@ -1,4 +1,4 @@
-from matplotlib.pyplot import hist
+import csv
 from config import CONSUMER_KEY, REDIRECT_URI, TD_ACCOUNT
 import datetime as dt
 import matplotlib as plt
@@ -30,7 +30,6 @@ def main():
         frequency=1,
         extended_hours=False
     )
-    pprint.pprint(VIX_His)
 
     VXX_His = td_session.get_price_history(
         symbol='VXX',
@@ -40,8 +39,19 @@ def main():
         frequency=1,
         extended_hours=False
     )
-    pprint.pprint(VXX_His)
 
+    # Saving
+    csv_columns = ["close", "datetime", "high", "low", "open", "volume"]
+    with open("data/VIX_His.csv", 'w') as f:
+        writer = csv.DictWriter(f, fieldnames=csv_columns)
+        writer.writeheader()
+        for candle in VIX_His["candles"]:
+            writer.writerow(candle)
+    with open("data/VXX_His.csv", 'w') as f:
+        writer = csv.DictWriter(f, fieldnames=csv_columns)
+        writer.writeheader()
+        for candle in VXX_His["candles"]:
+            writer.writerow(candle)
 
 if __name__ == '__main__':
     main()
