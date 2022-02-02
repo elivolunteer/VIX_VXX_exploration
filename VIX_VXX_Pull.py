@@ -25,7 +25,7 @@ def main():
     VIX_His = td_session.get_price_history(
         symbol='$VIX.X',
         period_type='year',
-        period=2,
+        period=3,
         frequency_type='daily',
         frequency=1,
         extended_hours=False
@@ -34,7 +34,7 @@ def main():
     VXX_His = td_session.get_price_history(
         symbol='VXX',
         period_type='year',
-        period=2,
+        period=3,
         frequency_type='daily',
         frequency=1,
         extended_hours=False
