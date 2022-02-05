@@ -21,7 +21,18 @@ To compensate for this risk VIX options can be bought to mitigate risk [**THIS N
 Since the VXX has rolling VIX futures, there is some exploitable difference in the spot prices of the VXX, VIX futures and VIX options. This data analysis will explore the relationships between the three.
 
 ## VIX and VXX Exploration
--> VIX_VXX.ipynb
+#### - VIX_VXX_Patterns.ipynb
+    - Explore basic patterns between VIX and VXX
+    - Plot data pulled from TDAmeritrade
+#### - VIX_Futures_Curves.ipynb
+    - Plot example VIX Future Curves
+    - Fit exponential functions to example data
+
+## Scripts
+#### - VIX_VXX_Pull.py
+    - Pulls VIX and VXX data from TDAmeritrade for the last three years. Creates csv from data
+#### - VIX_Futures_Fitter.py
+    - Given a set of VIX futures it returns fitting parameters and relevent metrics
 
 
 
